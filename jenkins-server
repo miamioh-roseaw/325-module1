@@ -1,14 +1,17 @@
+Setting up your Repository on ham-l
+
 1) Install your Ubuntu OS
 2) Open a terminal and type:
 
   sudo apt update
   sudo apt install -y git
   git config --global user.name "Your Name"
-  git config --global user.email "you@example.com"
-  git clone https://github.com/yourusername/network-automation-labs.git
+  git config --global user.email "yourMiamiID@miamioh.edum"
+  git clone https://github.com/yourgithubusername/network-automation-labs.git
   cd network-automation-labs
   git config --global credential.helper cache
-  Jenkins Setup on jenkins-server
+
+Jenkins Setup on jenkins-server
 
 3) Update Java:
   sudo apt update

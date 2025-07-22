@@ -1,0 +1,15 @@
+Setting up your Repository on ham-l
+
+1) Install your Ubuntu OS
+2) Create a text file and copy in this info and modify it to match your usernames and accounts...
+
+  sudo apt update
+  sudo apt install -y git
+  git config --global user.name "Your Name"
+  git config --global user.email "yourMiamiID@miamioh.edu"
+  git clone https://github.com/yourgithubusername/network-automation-labs.git
+  cd network-automation-labs
+  git config --global credential.helper cache
+
+3) Select the code above in your text file and right-click and 'copy'.
+4) Open a terminal window and right-click to paste in your code.

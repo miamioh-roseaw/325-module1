@@ -1,14 +1,18 @@
 Setting up your Repository on ham-l
 
 1) Install your Ubuntu OS
-2) Create a text file and copy in this info and modify it to match your usernames and accounts...
+
+2) Create a new directory for module 1
+  mkdir cit325-module1
+
+3) Create a text file and copy in this info and modify it to match your usernames and accounts...
 
   sudo apt update
   sudo apt install -y git
   git config --global user.name "Your Name"
   git config --global user.email "yourMiamiID@miamioh.edu"
-  git clone https://github.com/yourgithubusername/network-automation-labs.git
-  cd network-automation-labs
+  git clone https://github.com/yourgithubusername/cit325-module1.git
+  cd cit325-module1
   git config --global credential.helper cache
 
 3) Select the code above in your text file and right-click and 'copy'.

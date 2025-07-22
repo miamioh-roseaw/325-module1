@@ -1,0 +1,62 @@
+conf t
+hostname mgmt-rtr
+ip domain lookup
+ip name-server 8.8.8.8
+!
+interface g0/0
+ description Link to NAT
+ ip address dhcp
+ ip nat outside
+ no shutdown
+!
+interface g0/1
+ description mgmt plane
+ ip address 10.10.10.1 255.255.255.0
+ ip nat inside
+ no shutdown
+!
+ip dhcp excluded-address 10.10.10.1 10.10.21.9
+ip dhcp pool MGMT-PLANE
+ network 10.10.10.0 255.255.255.0
+ default-router 10.10.10.1
+ dns-server 10.10.10.1
+!
+ip dhcp pool jenkins
+   host 10.10.10.10 255.255.255.0
+   client-identifier 0100.1122.3344.55 !change to your jenkins-server's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip dhcp pool ham-l
+   host 10.10.10.11 255.255.255.0
+   client-identifier 0100.1122.3344.56 !change to your ham-l's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip dhcp pool mid-l
+   host 10.10.10.12 255.255.255.0
+   client-identifier 0100.1122.3344.57 !change to your mid-l's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip dhcp pool oxf-l
+   host 10.10.10.13 255.255.255.0
+   client-identifier 0100.1122.3344.58 !change to your oxf-l's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip dhcp pool mid-w
+   host 10.10.10.14 255.255.255.0
+   client-identifier 0100.1122.3344.59 !change to your mid-w's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip dhcp pool ham-w
+   host 10.10.10.15 255.255.255.0
+   client-identifier 0100.1122.3344.5A.  !change to your ham-w's MAC address
+   default-router 10.10.10.1
+    dns-server 10.10.10.1
+!
+ip nat inside source list 1 interface g0/0 overload
+access-list 1 permit 10.10.10.0 0.0.0.255
+end

@@ -20,4 +20,5 @@ network 14.14.14.0 0.0.0.255 area 0
 end
 copy run start
 startup-config
+conf t
 crypto key generate rsa                   ! use 768 when prompted

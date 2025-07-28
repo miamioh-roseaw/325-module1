@@ -3,7 +3,6 @@ conf t
 hostname mid-rtr
 ip domain-name cit325.com
 username student password P@ssword
-crypto key generate rsa                   ! use 512 when prompted
 ip ssh version 2
 line vty 0-4
 transport input ssh
@@ -20,3 +19,4 @@ network 12.12.12.0 0.0.0.255 area 0
 network 14.14.14.0 0.0.0.255 area 0
 end
 copy run start
+crypto key generate rsa                   ! use 768 when prompted

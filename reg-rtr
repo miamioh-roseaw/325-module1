@@ -15,8 +15,13 @@ interface G0/0
  ip address 15.15.15.1 255.255.255.0
  no shut
  router ospf 100
+interface G0/3
+ description Link from here to there
+ ip address 10.10.10.2 255.255.255.0
+ no shut
 network 14.14.14.0 0.0.0.255 area 0
 network 15.15.15.0 0.0.0.255 area 0
+network 10.10.10.0 0.0.0.255 area 0
 end
 copy run start
 startup-config

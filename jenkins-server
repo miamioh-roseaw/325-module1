@@ -16,5 +16,5 @@ Jenkins Setup on jenkins-server
    sudo systemctl enable jenkins
    sudo systemctl start jenkins
 
-4) Open http://10.10.21.10:8080 in your browser and finish setup using the password derived from executing the command below on the jenkins-server terminal:
+4) Open http://10.10.10.10:8080 in your browser and finish setup using the password derived from executing the command below on the jenkins-server terminal:
    sudo cat /var/lib/jenkins/secrets/initialAdminPassword

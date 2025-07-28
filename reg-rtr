@@ -1,0 +1,24 @@
+en
+conf t
+hostname reg-rtr
+ip domain-name cit325.com
+username student password P@ssword
+ip ssh version 2
+line vty 0 4
+transport input ssh
+interface G0/1
+ description Link from here to there
+ ip address 14.14.14.1 255.255.255.0
+ no shut
+interface G0/0
+ description Link from here to there
+ ip address 15.15.15.1 255.255.255.0
+ no shut
+ router ospf 100
+network 14.14.14.0 0.0.0.255 area 0
+network 15.15.15.0 0.0.0.255 area 0
+end
+copy run start
+startup-config
+conf t
+crypto key generate rsa                   ! use 768 when prompted

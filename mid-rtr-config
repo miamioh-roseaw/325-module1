@@ -4,7 +4,7 @@ hostname mid-rtr
 ip domain-name cit325.com
 username student password P@ssword
 ip ssh version 2
-line vty 0-4
+line vty 0 4
 transport input ssh
 interface G0/0
  description Link from here to there

@@ -4,13 +4,13 @@ hostname mgmt-rtr
 ip domain lookup
 ip name-server 8.8.8.8
 !
-interface g0/1
+interface g0/0
  description Link to NAT
  ip address dhcp
  ip nat outside
  no shutdown
 !
-interface g0/0
+interface g0/1
  description mgmt plane
  ip address 10.10.10.1 255.255.255.0
  ip nat inside

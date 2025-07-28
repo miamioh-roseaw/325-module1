@@ -7,16 +7,21 @@ ip ssh version 2
 line vty 0 4
 transport input ssh
 interface G0/0
- description Link from here to there
+ description Link mgmt-rtr
+ ip address 10.10.10.1 255.255.255.0
+ no shut
+interface G0/2
+ description Link to mid-sw
  ip address 12.12.12.1 255.255.255.0
  no shut
 interface G0/1
- description Link from here to there
+ description Link to reg-rtr
  ip address 14.14.14.1 255.255.255.0
  no shut
  router ospf 100
-network 12.12.12.0 0.0.0.255 area 0
-network 14.14.14.0 0.0.0.255 area 0
+  network 10.10.10.0 0.0.0.255 area 0
+  network 12.12.12.0 0.0.0.255 area 0
+  network 14.14.14.0 0.0.0.255 area 0
 end
 copy run start
 startup-config

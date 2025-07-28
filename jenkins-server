@@ -1,20 +1,22 @@
-
-
 Jenkins Setup on jenkins-server
 
-1) Update Java (paste these into the terminal window by right-clicking and 'copy' and right-click and 'paste':
+1) Install Ubuntu.
+
+2) Update Java (paste these into the terminal window by right-clicking and 'copy' and right-click and 'paste':
   sudo apt update
   sudo apt install -y openjdk-17-jdk git
 
-2)Install Jenkins after adding APT repo (copy and paste these one line at a time into the terminal):
+3)Install Jenkins after adding APT repo (copy and paste these one line at a time into the terminal):
   wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key |   sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
   echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]   https://pkg.jenkins.io/debian-stable binary/ |   sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
   sudo apt update
   sudo apt install -y jenkins
 
-3) Start and Enable Jenkins:
+4) Start and Enable Jenkins:
    sudo systemctl enable jenkins
    sudo systemctl start jenkins
 
-4) Open http://10.10.10.10:8080 in your browser and finish setup using the password derived from executing the command below on the jenkins-server terminal:
+5) Open http://10.10.10.10:8080 in your browser and finish setup using the password derived from executing the command below on the jenkins-server terminal:
    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+6) Install common plugins

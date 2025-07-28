@@ -24,7 +24,7 @@ ip dhcp pool MGMT-PLANE
 !
 ip dhcp pool jenkins
    host 10.10.10.10 255.255.255.0
-   client-identifier 0100.1122.3344.55 !change to your jenkins-server's MAC address
+   client-identifier 0100.1122.3344.55 !change to your 01, then your jenkins-server's MAC address
    default-router 10.10.10.1
     dns-server 10.10.10.1
 !
@@ -42,7 +42,7 @@ ip dhcp pool mid-l
 !
 ip dhcp pool oxf-l
    host 10.10.10.13 255.255.255.0
-   client-identifier 11:22:33:44:55:07 !change to your oxf-l's MAC address
+   client-identifier 0111.2233:4455:07 !change to your oxf-l's MAC address
    default-router 10.10.10.1
     dns-server 10.10.10.1
 !

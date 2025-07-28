@@ -24,7 +24,7 @@ ip dhcp pool MGMT-PLANE
 !
 ip dhcp pool jenkins
    host 10.10.10.10 255.255.255.0
-   client-identifier 0111.1111.1111.11 !change to your jenkins-server's MAC address 
+   client-identifier 010c.5768.6100.00 !change to your jenkins-server's MAC address (0c:57:68:61:00:00)
    default-router 10.10.10.1
     dns-server 10.10.10.1
 !

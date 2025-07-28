@@ -1,0 +1,9 @@
+en
+conf t
+hostname mid-sw
+interface Vlan1
+ ip address 12.12.12.2 255.255.255.0
+ end
+ copy run start
+ startup-config
+ end

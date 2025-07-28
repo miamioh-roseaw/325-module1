@@ -44,7 +44,7 @@ ip dhcp pool oxf-l
    host 10.10.10.13 255.255.255.0
    client-identifier 010c.d02e.a000.00 !change your oxf-l's MAC address, preceeded by type 01 0c:do:2e:a0:00:00
    default-router 10.10.10.1
-    dns-server 10.10.10.1
+    dns-server 10.10.10.1, 8.8.8.8
 !
 ip dhcp pool mid-w
    host 10.10.10.14 255.255.255.0

@@ -58,7 +58,7 @@ ip dhcp pool ham-w
    default-router 10.10.10.1
     dns-server 10.10.10.1
 !
-ip nat inside source list 1 interface g0/1 overload
+ip nat inside source list 1 interface g0/0 overload
 access-list 1 permit 10.10.10.0 0.0.0.255
 
 end

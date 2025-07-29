@@ -10,3 +10,5 @@ interface Vlan1
  copy run start
  startup-config
  end
+conf t
+crypto key generate rsa                   ! use 768 when prompted

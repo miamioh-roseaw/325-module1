@@ -72,4 +72,5 @@ end
 !
 copy run start
 startup-config
+conf t
 crypto key generate rsa                   ! use 768 when prompted, and do a 'copy run start' after!!!!!

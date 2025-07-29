@@ -64,4 +64,9 @@ ip dhcp pool ham-w
 ip nat inside source list 1 interface g0/0 overload
 access-list 1 permit 10.10.10.0 0.0.0.255
 ip route 0.0.0.0 0.0.0.0 dhcp
+!
+line vty 0 4
+ login local
+ transport input ssh
 end
+

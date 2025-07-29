@@ -1,13 +1,14 @@
 en
 conf t
 hostname ham-sw
- ip domain-name cit325.com
- username student password Passw0rd!
- ip ssh version 2
+ip domain name cit325.com
+ip ssh version 2
+username student privilege 15 secret Passw0rd!
  line vty 0 4
   transport input ssh
+  login local
 interface Vlan1
- ip address 11.11.11.2 255.255.255.0
+ ip address 10.10.10.6 255.255.255.0
  end
  copy run start
  startup-config

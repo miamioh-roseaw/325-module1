@@ -1,8 +1,11 @@
 en
 conf t
 hostname mid-sw
+ip domain name cit325.com
+ip ssh version 2
+username student privilege 15 secret Passw0rd!
 interface Vlan1
- ip address 12.12.12.2 255.255.255.0
+ ip address 10.10.10.7 255.255.255.0
  end
  copy run start
  startup-config

@@ -3,6 +3,9 @@ conf t
 hostname mid-sw
 ip domain name cit325.com
 ip ssh version 2
+line vty 0 4
+transport input ssh
+login local
 username student privilege 15 secret Passw0rd!
 interface Vlan1
  ip address 10.10.10.7 255.255.255.0

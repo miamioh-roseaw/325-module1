@@ -2,7 +2,7 @@ en
 conf t
 hostname reg-rtr
 ip domain-name cit325.com
-username student password Passw0rd!
+username student privilege 15 secret Passw0rd!
 ip ssh version 2
 line vty 0 4
 transport input ssh

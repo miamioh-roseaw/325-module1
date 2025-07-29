@@ -1,6 +1,9 @@
 en
 conf t
 hostname mgmt-rtr
+ip domain name cit325.com
+ip ssh version 2
+username student privilege 15 secret Passw0rd!
 ip domain lookup
 ip name-server 8.8.8.8
 !

@@ -6,6 +6,7 @@ ip ssh version 2
 username student privilege 15 secret Passw0rd!
 line vty 0 4
 transport input ssh
+login local
 interface G0/0
  description Link mgmt-rtr
  ip address 10.10.10.1 255.255.255.0

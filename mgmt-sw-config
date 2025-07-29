@@ -1,14 +1,14 @@
 en
 conf t
-hostname mgmt-sw
+ hostname mgmt-sw
  ip domain-name cit325.com
-username student password Passw0rd!
-ip ssh version 2
-line vty 0 4
-transport input ssh
-interface Vlan1
- ip address 10.10.10.5 255.255.255.0
-no shut
+ username student password Passw0rd!
+ ip ssh version 2
+ line vty 0 4
+  transport input ssh
+ interface Vlan1
+  ip address 10.10.10.5 255.255.255.0
+ no shut
 end
 copy run start
  startup-config

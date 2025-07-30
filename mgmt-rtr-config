@@ -4,6 +4,7 @@ hostname mgmt-rtr
 ip domain name cit325.com
 ip ssh version 2
 username student privilege 15 secret Passw0rd!
+crypto key generate rsa modulus 2046
 ip domain lookup
 ip name-server 8.8.8.8
 !
@@ -72,5 +73,4 @@ end
 !
 copy run start
 startup-config
-conf t
-crypto key generate rsa                   ! use 768 when prompted, and do a 'copy run start' after!!!!!
+

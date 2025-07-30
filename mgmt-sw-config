@@ -9,6 +9,7 @@ username student privilege 15 secret Passw0rd!
   login local
 interface Vlan1
  ip address 10.10.10.5 255.255.255.0
+  no shut
  end
  copy run start
  startup-config

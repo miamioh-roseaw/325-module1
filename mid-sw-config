@@ -6,6 +6,7 @@ ip ssh version 2
 crypto key generate rsa modulus 2046
 line vty 0 4
 transport input ssh
+exec-timeout 0 0
 login local
 username student privilege 15 secret Passw0rd!
 interface Vlan1

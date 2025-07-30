@@ -5,9 +5,10 @@ ip domain name cit325.com
 ip ssh version 2
 username student privilege 15 secret Passw0rd!
 crypto key generate rsa modulus 2046
- line vty 0 4
+line vty 0 4
   transport input ssh
   login local
+  exec-timeout 0 0
 interface Vlan1
  ip address 10.10.10.6 255.255.255.0
   no shut

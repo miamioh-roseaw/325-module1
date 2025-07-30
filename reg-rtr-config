@@ -6,8 +6,9 @@ username student privilege 15 secret Passw0rd!
 crypto key generate rsa modulus 2046
 ip ssh version 2
 line vty 0 4
-transport input ssh
-login local
+ transport input ssh
+ exec-timeout 0 0
+ login local
 interface G0/1
  description Link to mid-rtr
  ip address 14.14.14.1 255.255.255.0

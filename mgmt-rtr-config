@@ -69,6 +69,7 @@ ip route 0.0.0.0 0.0.0.0 dhcp
 line vty 0 4
  login local
  transport input ssh
+ exec-timeout 0 0
 end
 !
 copy run start

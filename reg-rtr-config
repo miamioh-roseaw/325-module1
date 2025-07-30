@@ -3,6 +3,7 @@ conf t
 hostname reg-rtr
 ip domain-name cit325.com
 username student privilege 15 secret Passw0rd!
+crypto key generate rsa modulus 2046
 ip ssh version 2
 line vty 0 4
 transport input ssh
@@ -27,5 +28,4 @@ network 10.10.10.0 0.0.0.255 area 0
 end
 copy run start
 startup-config
-conf t
-crypto key generate rsa                   ! use 768 when prompted
+end

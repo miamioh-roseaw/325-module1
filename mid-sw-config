@@ -3,6 +3,7 @@ conf t
 hostname mid-sw
 ip domain name cit325.com
 ip ssh version 2
+crypto key generate rsa modulus 2046
 line vty 0 4
 transport input ssh
 login local
@@ -14,5 +15,3 @@ interface Vlan1
  copy run start
  startup-config
  end
-conf t
-crypto key generate rsa                   ! use 768 when prompted

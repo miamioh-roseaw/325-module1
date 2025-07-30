@@ -4,6 +4,7 @@ hostname mid-rtr
 ip domain name cit325.com
 ip ssh version 2
 username student privilege 15 secret Passw0rd!
+crypto key generate rsa modulus 2046
 line vty 0 4
 transport input ssh
 login local
@@ -26,5 +27,3 @@ interface G0/1
 end
 copy run start
 startup-config
-conf t
-crypto key generate rsa                   ! use 768 when prompted

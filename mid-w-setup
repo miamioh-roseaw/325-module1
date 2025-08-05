@@ -1,5 +1,5 @@
 1. Install the Windows OS
-2. Run this as Administrator on each Windows machine
+2. Run this as Administrator in PowerShell
     winrm quickconfig -force
     Set-Item WSMan:\localhost\Service\AllowUnencrypted -Value $true
     Set-Item WSMan:\localhost\Service\Auth\Basic -Value $true

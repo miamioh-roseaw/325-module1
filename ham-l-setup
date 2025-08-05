@@ -1,0 +1,7 @@
+Setting up ham-l
+
+1) Install your Ubuntu OS
+
+2) Allow connectivity via ssh:
+  sudo apt update
+  sudo apt install openssh-server

@@ -1,0 +1,7 @@
+1. Install the Windows OS
+2. Run this as Administrator on each Windows machine
+    winrm quickconfig -force
+    Set-Item WSMan:\localhost\Service\AllowUnencrypted -Value $true
+    Set-Item WSMan:\localhost\Service\Auth\Basic -Value $true
+    New-NetFirewallRule -Name "WinRM Port" -DisplayName "WinRM Port 5985" -Protocol TCP -LocalPort 5985 -Action Allow
+

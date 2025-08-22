@@ -3,11 +3,11 @@ conf t
 hostname reg-rtr
 ip domain-name cit325.com
 username student privilege 15 secret Passw0rd!
-crypto key generate rsa modulus 2046
+crypto key generate rsa modulus 2048
 ip ssh version 2
 line vty 0 4
  transport input ssh
- exec-timeout 0 0
+ exec-timeout 10 0
  login local
 interface G0/1
  description Link to mid-rtr
@@ -27,6 +27,4 @@ network 14.14.14.0 0.0.0.255 area 0
 network 15.15.15.0 0.0.0.255 area 0
 network 10.10.10.0 0.0.0.255 area 0
 end
-copy run start
-startup-config
-end
+write memory
